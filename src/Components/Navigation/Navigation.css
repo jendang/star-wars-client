@@ -1,0 +1,17 @@
+.navbar {
+    max-width: 1260px;
+    margin: auto;
+    color: #fff;
+    font-size: 32px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.navbar-item {
+    /* float: left; */
+    display: inline;
+    padding: 30px;
+    margin: 0 auto;
+}
+
+.navbar-item:hover {color: rgb(104, 197, 116);}
