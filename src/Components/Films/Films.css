@@ -1,0 +1,15 @@
+.films {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px;
+    justify-items: center;
+    align-items: center;
+    
+}
+
+.pageheader {
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 50px;
+    
+}
