@@ -1,26 +1,35 @@
 import React from 'react';
-import logo from './logo.svg';
+import { Router, Route, Switch } from 'react-router-dom'
+// import logo from './Assets/starwarslogo.png';
 import './App.css';
+import Navigation from './Components/Navigation/Navigation'
+import Films from './Components/Films/Films'
+import Characters from './Components/Characters/Characters'
+import Planets from './Components/Planets/Planets'
+import Home from './Components/Home/Home'
+import history from './history'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component {
+  render(){
+    return (
+      // <div className="App" >
+        // <div className="app ui container">
+          <Router history={history}>
+            <div className="ui container">
+              <Navigation />
+              <Switch>
+                <Route path="/" exact component={Home} />
+                <Route path="/films" exact component={Films} />
+                <Route path="/characters" exact component={Characters} />
+                <Route path="/planets" exact component={Planets} />
+              </Switch>
+            </div>
+          </Router>
+        // </div>
+      // </div>
+    )
+
+  }
 }
 
 export default App;
