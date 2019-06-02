@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom'
 import './Navigation.css';
 
 // import 'tachyons';
@@ -6,17 +7,16 @@ import './Navigation.css';
 const Navigation = () => {
 
   return (
-    <nav className="navbar">
-      <div className="navbar-item">Home</div>
-      <div className="navbar-item">Films</div>
-      <div className="navbar-item">Planets</div>
-    </nav>
-    // <nav className="navbar flex flex-row">
-    //   <div className="navbar-item f3 underline grow">Home</div>
-    //   <div className="navbar-item f3 underline grow">Films</div>
-    //   {/* <div className="navbar-item f3 underline grow">Spaceships</div> */}
-    //   <div className="navbar-item f3 underline grow">Planets</div>
-    // </nav>
+    <div>
+      <div className="ui secondary pointing menu ">
+        <Link to="/" className="item">Home</Link>
+      </div>
+      <div className="right menu">
+        <Link to="/" className="item">Films</Link>
+        <Link to="/" className="item">Characters</Link>
+        <Link to="/" className="item">Planets</Link>
+      </div>
+    </div>
   )
 
 
