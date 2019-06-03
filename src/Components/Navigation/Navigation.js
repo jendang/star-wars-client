@@ -6,7 +6,7 @@ import './Navigation.css';
 
 const Navigation = () => {
   return (
-    <div className="style">
+    <div>
       <div className="ui secondary pointing menu">
         <Link to="/" className="item" style={{ color: "white", fontSize: "20px" }}>Home</Link>
         <Link to="/films" className="item" style={{ color: "white", fontSize: "20px" }}>Films</Link>

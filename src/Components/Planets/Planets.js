@@ -44,7 +44,7 @@ class Planets extends React.Component {
     render() {
         return (
             <div>
-                <div className="ui container">
+                {/* <div className="ui container"> */}
                     <div className="pageHeader">
                         <h1>Searching planets by climate type</h1>
                     </div>
@@ -55,7 +55,6 @@ class Planets extends React.Component {
                                     type="text" 
                                     ref={node => this.input = node} 
                                     placeholder="Please enter the climate type you want to search!"
-                                    style={{ width: "50%"}}
                                 />
                                 <button type="submit" className="ui black button">Search</button>
                             {/* </div> */}
@@ -64,7 +63,7 @@ class Planets extends React.Component {
                     <div className="renderCard">
                         {this.renderPlanets()}
                     </div>                
-                </div>
+                {/* </div> */}
             </div>
         )
     }
