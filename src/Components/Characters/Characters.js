@@ -1,5 +1,5 @@
 import React from 'react'
-import CharacterRender from './CharacterRender'
+import CharacterCard from './CharacterCard'
 import api from '../api/api'
 
 
@@ -8,13 +8,13 @@ const applyUpdateResult = (result) => (prevState) => ({
     page: result.pageData.page,
     page_count: result.pageData.page_count
     
-  });
+})
   
 const applySetResult = (result) => (prevState) => ({
     characters: result.characters,
     page: result.pageData.page,
     page_count: result.pageData.page_count
-  });
+})
   
 const getCharacters = (value, page) => {
     return api.get(`/movies/search?title=${value}&page=${page}`)
@@ -63,26 +63,49 @@ class Characters extends React.Component {
             
         }
     }
+
+    renderCharacters = () => {
+        const { page, characters } = this.state
+        if(page === 1){
+            return characters.map(character => {
+                return <CharacterCard key={character.url} character={character} />
+            })
+
+        } else {
+            return characters.slice(30*(page - 1), 30 * page).map(character => {
+                    return <CharacterCard key={character.url} character={character} />
+            })
+        }
+    }
     
 
     render() {
         console.log(this.state)
-        const { characters, page } = this.state
+        //const { characters, page } = this.state
         return (
             <div className="ui container">
                 <div className="pageHeader">
-                    <h1>{this.props.match.params.title}</h1>
-                </div>
-                <div>
-                    <button onClick={this.onPaginatedNext}>Next</button>
+                    <h1>List of characters from {this.props.match.params.title} film</h1>
                     <p>Page: {this.state.page}</p>
                     <p>Total of pages: {this.state.page_count}</p>
-                    <button onClick={this.onPaginatedPrevious}>Previous</button>
+                    <div>
+                        <button className="ui animated button" onClick={this.onPaginatedPrevious}>
+                            <div class="visible content">Previous</div>
+                            <div class="hidden content">
+                                <i class="left arrow icon"></i>
+                            </div>
+                        </button>
+                        <button className="ui animated button" onClick={this.onPaginatedNext}>
+                            <div class="visible content">Next</div>
+                            <div class="hidden content">
+                                <i class="right arrow icon"></i>
+                            </div>
+                        </button>
+                    </div>
                 </div>
-                <CharacterRender
-                    characters={characters}
-                    page={page}
-                />
+                <div className="renderCard">
+                    {this.renderCharacters()}
+                </div>
             </div>
         )
     }
