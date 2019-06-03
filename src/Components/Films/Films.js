@@ -18,9 +18,7 @@ class Films extends React.Component {
     }
 
     renderFilms = () => {
-        //console.log(this.state.films)
-        const sortFilms = this.state.films.sort((a, b) => Number(a.episode_id) - Number(b.episode_id))
-        return sortFilms.map(film => { 
+        return this.state.films.map(film => { 
             return (
                 <FilmCard 
                     key={film.title} 
