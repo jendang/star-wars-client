@@ -48,9 +48,9 @@ class Planets extends React.Component {
                     <div className="pageHeader">
                         <h1>Searching planets by climate type</h1>
                     </div>
-                    <div className="ui form" style={{ textAlign: "center"}}>
-                        <form type="submit" onSubmit={this.onInitialSearch}>
-                            <div className="field">
+                    {/* <div className="ui form" style={{ textAlign: "center"}}> */}
+                        <form type="submit" onSubmit={this.onInitialSearch} className="ui form" style={{ textAlign: "center"}}>
+                            {/* <div className="field"> */}
                                 <input 
                                     type="text" 
                                     ref={node => this.input = node} 
@@ -58,9 +58,9 @@ class Planets extends React.Component {
                                     style={{ width: "50%"}}
                                 />
                                 <button type="submit" className="ui black button">Search</button>
-                            </div>
+                            {/* </div> */}
                         </form>
-                    </div>
+                    {/* </div> */}
                     <div className="renderCard">
                         {this.renderPlanets()}
                     </div>                

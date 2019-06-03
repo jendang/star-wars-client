@@ -90,15 +90,15 @@ class Characters extends React.Component {
                     <p>Total of pages: {this.state.page_count}</p>
                     <div>
                         <button className="ui animated button" onClick={this.onPaginatedPrevious}>
-                            <div class="visible content">Previous</div>
-                            <div class="hidden content">
-                                <i class="left arrow icon"></i>
+                            <div className="visible content">Previous</div>
+                            <div className="hidden content">
+                                <i className="left arrow icon"></i>
                             </div>
                         </button>
                         <button className="ui animated button" onClick={this.onPaginatedNext}>
-                            <div class="visible content">Next</div>
-                            <div class="hidden content">
-                                <i class="right arrow icon"></i>
+                            <div className="visible content">Next</div>
+                            <div className="hidden content">
+                                <i className="right arrow icon"></i>
                             </div>
                         </button>
                     </div>

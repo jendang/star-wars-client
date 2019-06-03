@@ -1,7 +1,7 @@
 import React from 'react'
 import api from '../api/api'
 import FilmCard from './FilmCard'
-// import './Films.css'
+
 
 class Films extends React.Component {
     state = {
