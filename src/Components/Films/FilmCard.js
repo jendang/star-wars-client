@@ -1,22 +1,23 @@
 import React from 'react'
 // import './FilmsList.css'
+import { Link } from 'react-router-dom'
 
-const FilmsList = ({ film, poster }) => {
+const FilmCard = ({ film, poster }) => {
 
 
     return (
         <div className="ui card">
-            <div className="image">
+            <Link to={`/films/${film.title}`} className="image">
                 <img 
                     src={ require(`../../Assets/episodio${poster}.jpg`) } 
                     alt={`Episode${poster} poster`} 
                     style={{maxWidth: "500px", maxHeight:"300px"}}
                 />
-            </div>
+            </Link>
             <div className="content">
-                <div className="header">
+                <Link to={`/films/${film.title}`} className="header">
                     {film.title}
-                </div>
+                </Link>
                 <div className="meta">
                     Episode: {film.episode_id}
                 </div>
@@ -25,4 +26,4 @@ const FilmsList = ({ film, poster }) => {
     )
 }
 
-export default FilmsList
+export default FilmCard
