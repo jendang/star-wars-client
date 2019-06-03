@@ -48,15 +48,15 @@ class Planets extends React.Component {
                 <div className="pageHeader">
                     <h1>Searching planets by climate type</h1>
                 </div>
-                <div>
-                    <form className="ui large form" type="submit" onSubmit={this.onInitialSearch}>
-                        <div className="field">
+                <div className="center">
+                    <form className="ui fluid action input" type="submit" onSubmit={this.onInitialSearch}>
+                        {/* <div className="field"> */}
                             <input 
                                 type="text" 
                                 ref={node => this.input = node} 
                                 placeholder="Please enter the climate type you want to search!"
                             />
-                        </div>
+                        {/* </div> */}
                         <button type="submit" className="ui submit button">Search</button>         
                     </form>
                 </div>
