@@ -1,11 +1,12 @@
 import React from 'react'
 import api from '../api/api'
-import FilmsList from './FilmsList'
-import './Films.css'
+import FilmCard from './FilmCard'
+// import './Films.css'
 
 class Films extends React.Component {
     state = {
-        films: []
+        films: [],
+        selectedFilms: null
     }
     componentDidMount(){
         const response = api.get("/movies").then(response => {
@@ -16,11 +17,14 @@ class Films extends React.Component {
     }
 
     renderFilms = () => {
-        console.log(this.state.films)
+        //console.log(this.state.films)
         const sortFilms = this.state.films.sort((a, b) => Number(a.episode_id) - Number(b.episode_id))
         return sortFilms.map(film => { 
             return (
-                <FilmsList key={film.title} film={film} poster={film.episode_id}/>
+                <FilmCard 
+                    key={film.title} 
+                    film={film} 
+                    poster={film.episode_id}/>
                 
             )
         })
@@ -29,10 +33,10 @@ class Films extends React.Component {
     render() {
         return (
             <div className="ui container">
-                <div className="pageheader">
+                <div className="pageHeader">
                     <h1> List of all episodes </h1>
                 </div>
-                <div className="films">
+                <div className="renderCard">
                     {this.renderFilms()}
                 </div>
             </div>
