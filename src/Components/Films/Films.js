@@ -9,7 +9,8 @@ class Films extends React.Component {
         selectedFilms: null
     }
     componentDidMount(){
-        const response = api.get("/movies").then(response => {
+        const response = fetch("https://desolate-shore-53301.herokuapp.com/movies")
+        .then(response => {
             return this.setState({ films: response.data})
             
         }).catch(err => console.log(err))
