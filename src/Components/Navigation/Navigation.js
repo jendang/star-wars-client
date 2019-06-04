@@ -13,7 +13,7 @@ const Navigation = () => {
         {/* <Link to="/characters" className="item">Characters</Link> */}
         <Link to="/planets" className="item" style={{ color: "white", fontSize: "20px" }}>Planets</Link>
         <div className="right menu">
-          <Link to="/" className="item" style={{ color: "white", fontSize: "20px" }}>Login/SignUp</Link>
+          {/* <Link to="/" className="item" style={{ color: "white", fontSize: "20px" }}>Login/SignUp</Link> */}
         </div>
       </div>
     </div>

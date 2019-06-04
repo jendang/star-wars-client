@@ -22,6 +22,11 @@ const FilmCard = ({ film, poster }) => {
                     Episode: {film.episode_id}
                 </div>
             </div>
+            <button className="ui yellow button" value="List of characters">
+                <Link to={`/films/${film.title}`} className="header">
+                    List of characters
+                </Link>
+            </button>
         </div>
     )
 }
