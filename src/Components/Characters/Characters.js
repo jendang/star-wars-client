@@ -1,19 +1,22 @@
 import React from 'react'
 import CharacterCard from './CharacterCard'
 import api from '../api/api'
-
+import './Characters.css'
+import Loader from '../Loader/Loader'
 
 const applyUpdateResult = (result) => (prevState) => ({
     characters: [...prevState.characters, ...result.characters],
     page: result.pageData.page,
-    page_count: result.pageData.page_count
+    page_count: result.pageData.page_count,
+    isLoading: false
     
 })
   
 const applySetResult = (result) => (prevState) => ({
     characters: result.characters,
     page: result.pageData.page,
-    page_count: result.pageData.page_count
+    page_count: result.pageData.page_count,
+    isLoading: false
 })
   
 const getCharacters = (value, page) => {
@@ -25,14 +28,15 @@ class Characters extends React.Component {
     state = {
         characters: [],
         page: 1,
-        page_count: 1
+        page_count: 1,
+        isLoading: false
     }
 
     fetchCharacters = (page) => {
         const { title } = this.props.match.params
+        this.setState({ isLoading: true })
         return getCharacters(title,page)
         .then(response => {
-            console.log(response.data)
             return response.data 
 
         })
@@ -80,33 +84,43 @@ class Characters extends React.Component {
     
 
     render() {
-        console.log(this.state)
-        //const { characters, page } = this.state
+        const { page, page_count, isLoading, characters } = this.state
         return (
-            <div className="ui container">
-                <div className="pageHeader">
-                    <h1>List of characters from {this.props.match.params.title} film</h1>
-                    <p>Page: {this.state.page}</p>
-                    <p>Total of pages: {this.state.page_count}</p>
-                    <div>
-                        <button className="ui animated button" onClick={this.onPaginatedPrevious}>
-                            <div className="visible content">Previous</div>
-                            <div className="hidden content">
-                                <i className="left arrow icon"></i>
+            // <div className="ui container">
+                <div>
+                    <div className="pageHeader">
+                        <h1>List of characters from {this.props.match.params.title} film</h1>
+                        <p>Page: {page}</p>
+                        <p>Total of pages: {page_count}</p>
+                        {page_count > 1
+                        ? 
+                            <div>
+                                <button className="ui button" onClick={this.onPaginatedPrevious}>
+                                    Previous
+                                </button>
+                                <button className="ui button" onClick={this.onPaginatedNext}>
+                                    Next
+                                </button>
                             </div>
-                        </button>
-                        <button className="ui animated button" onClick={this.onPaginatedNext}>
-                            <div className="visible content">Next</div>
-                            <div className="hidden content">
-                                <i className="right arrow icon"></i>
-                            </div>
-                        </button>
+                        :
+                            null
+                            // <p>Total of pages: 1</p>
+                        }
                     </div>
+
+                    { isLoading
+                    ?   
+                        <Loader />
+                        
+                    : 
+                       
+                        <div className="renderCard">
+                            {this.renderCharacters()}
+                        </div>
+                       
+                    }
                 </div>
-                <div className="renderCard">
-                    {this.renderCharacters()}
-                </div>
-            </div>
+            // </div>
         )
     }
 }
