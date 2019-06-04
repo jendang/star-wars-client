@@ -84,7 +84,7 @@ class Characters extends React.Component {
     
 
     render() {
-        const { page, page_count, isLoading, characters } = this.state
+        const { page, page_count, isLoading } = this.state
         return (
             // <div className="ui container">
                 <div>
