@@ -1,11 +1,11 @@
 import React from 'react'
 
-const PlanetCard = ({ planet }) => {
+const PlanetCard = ({ planet, image }) => {
     return (
             <div className="ui cards">
                 <div className="card">
                     <div className="image">
-                        <img src={require("../../Assets/logo-star-wars.jpg")} alt="" />   
+                        <img src={image} alt="" />   
                     </div>
                     <div className="content">
                         <div className="header">{planet.name}</div>
