@@ -3,7 +3,7 @@
 
 # :rocket::stars::sparkler::fireworks: Star Wars Fan page :fireworks::sparkler::stars::rocket:
 
-## :rocket::rocket::point_right: :point_right: [Checkout the deployed version here! ](https://smart-brains.netlify.com/) :point_left: :point_left::rocket::rocket:
+## :rocket::rocket::point_right: :point_right: [Checkout the deployed version here! ](https://star-fan.netlify.com/) :point_left: :point_left::rocket::rocket:
 
 ## What is this project about
 
