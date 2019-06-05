@@ -10,7 +10,7 @@
 The website for STAR WARS fans
 
 <p align='center'>
-    <img width="460" height="300" src="https://github.com/jendang/star-wars-client/blob/master/src/Assets/logo-star-wars.jpg">
+    <img src="https://github.com/jendang/star-wars-client/blob/master/src/Assets/logo-star-wars.jpg">
 </p>
 
 ## Table of contents
