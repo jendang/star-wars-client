@@ -3,6 +3,7 @@ import api from '../api/api'
 import PlanetCard from './PlanetCard'
 import './Planets.css'
 import Loader from '../Loader/Loader'
+import faker from 'faker'
 
 const getPlanetsByClimate = (value) => {
     return api.get(`/planets/search?climate=${value}`)
@@ -37,6 +38,7 @@ class Planets extends React.Component {
                 <PlanetCard 
                     key={planet.name}
                     planet={planet}
+                    image={faker.image.image()}
                 />
             )
         })

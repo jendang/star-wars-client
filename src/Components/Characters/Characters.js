@@ -3,6 +3,7 @@ import CharacterCard from './CharacterCard'
 import api from '../api/api'
 import './Characters.css'
 import Loader from '../Loader/Loader'
+import faker from 'faker'
 
 const applyUpdateResult = (result) => (prevState) => ({
     characters: [...prevState.characters, ...result.characters],
@@ -72,12 +73,24 @@ class Characters extends React.Component {
         const { page, characters } = this.state
         if(page === 1){
             return characters.map(character => {
-                return <CharacterCard key={character.url} character={character} />
+                return (
+                    <CharacterCard 
+                        key={character.url} 
+                        character={character} 
+                        image={faker.image.avatar()}
+                    />
+                )
             })
 
         } else {
             return characters.slice(30*(page - 1), 30 * page).map(character => {
-                    return <CharacterCard key={character.url} character={character} />
+                    return (
+                        <CharacterCard 
+                            key={character.url} 
+                            character={character} 
+                            image={faker.image.people()}
+                        />
+                    )
             })
         }
     }
