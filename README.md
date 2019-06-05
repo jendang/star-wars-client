@@ -1,68 +1,92 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+[![Netlify Status](https://api.netlify.com/api/v1/badges/286a7caa-5b18-46d5-b069-5a46386abbb4/deploy-status)](https://app.netlify.com/sites/star-fan/deploys)
 
-In the project directory, you can run:
+# :rocket::stars::sparkler::fireworks: Star Wars Fan page :fireworks::sparkler::stars::rocket:
 
-### `npm start`
+## :rocket::rocket::point_right: :point_right: [Checkout the deployed version here! ](https://smart-brains.netlify.com/) :point_left: :point_left::rocket::rocket:
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## What is this project about
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+The website for STAR WARS fans
 
-### `npm test`
+<p align='center'>
+    <img width="460" height="300" src="https://github.com/jendang/star-wars-client/blob/master/src/Assets/logo-star-wars.jpg">
+</p>
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Table of contents
 
-### `npm run build`
+* Technologies used
+* Goals for this project
+* Installation 
+* Features can add with pull requests
+* My git work flow
+* My agile workflow
+* APIs/Packages references
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Technologies used
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+### Front-end
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+* This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+* [Semantic UI](https://semantic-ui.com/)
 
-### `npm run eject`
+### Back-end
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+* NodeJS
+* [express](https://expressjs.com/)
+* [heroku for deploy](https://desolate-shore-53301.herokuapp.com/)
+* [Backend git REPO](https://github.com/jendang/star-wars-api)
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Goals for this project
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+* To practice myself with React
+* Full stack project for my portfolio
+* To showcase disciplined git usage 
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
+## Installation
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+* First, clone the [project](https://github.com/jendang/star-wars-client)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+``` javascript
 
-### Code Splitting
+cd projectFolder  
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+npm install
 
-### Analyzing the Bundle Size
+npm start
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+```
 
-### Making a Progressive Web App
+## Features can add with pull requests
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+* Authentication
+* OAuth with Facebook, Google, ...
+* Implementing Redux 
+* Comments
 
-### Advanced Configuration
+## My git workflow
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+* Good commit messages
+* Well named branches
 
-### Deployment
+## My agile workflow 
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+I created a project to manage my workflow inside the git repository. I divided my tasks into three sessions:
+* todos: list all steps/activities that you need to do for the project
+* in progress: I move the todos here when I am working on that
+* done: I move the tasks here when I finished it
 
-### `npm run build` fails to minify
+[Checkout my project's planning here](https://github.com/jendang/star-wars-client/projects/1)
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+## APIs/Packages references
+
+* [SWAPI](https://swapi.co/)
+* [react-particles for website background](https://www.npmjs.com/package/react-particles-js)
+
+
+For more information about this project, please feel free to [contact me](https://www.linkedin.com/in/jennydang/)
+
+
+
+
